@@ -1,5 +1,185 @@
+/* === UNIVERSAL STYLING === */
+
+html {
+  font-size: 18px;
+  background-color: white;
+  color: white;
+}
+
 body {
-  font-size: 2rem;
-  color: red;
+  /*background-color: white;*/
+  font-family: Helvetica, sans-serif;
+  line-height: 1.4em;
+}
+
+@media only screen and (max-width: 1024) {
+  body {
+    font-size 16px;
+  }
+}
+
+h1, h4 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ==== COMPANY HEADER === */
+
+.company {
+  color: white;
   background-color: black;
+}
+
+.company-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 0 12px 0.5em;
+}
+.company img {
+  height: 1.5em;
+  padding-right: 15px;
+}
+
+/* === MAIN BANNER === */
+
+.main-banner {
+  background: url("../images/moto.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+  padding-top: 2rem;
+}
+
+.banner-hero {
+  background-color: black;
+  color: white;
+  width: 20em;
+  padding: 2em 3em;
+  position: relative;
+  top: 9em;
+}
+
+.banner-hero h1 {
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15em;
+  }
+
+  .banner-hero {
+    width: 100%;
+    padding: 1em 2em;
+    top: 10em;
+  }
+
+  .banner-hero h1 {
+    font-size: 1rem;
+  }
+
+  .banner-hero h4 {
+    font-size: 0.77rem;
+  }
+}
+
+/* === PRODUCT NAVIGATION BAR === */
+
+nav {
+  background-color: firebrick;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  list-style: none;
+}
+
+mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+  nav ul {
+    display: none;
+  }
+
+  mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* === PRODUCT CATALGUE and BUSINESS INFORMATION === */
+
+.products,
+.business-info  {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em 0 0 0;
+}
+
+.product-tile {
+  width: 30%;
+}
+
+.product-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9em;
+  border: 4px solid black;
+  padding: 2em 0;
+}
+
+.product-image img {
+    max-width: 8em;
+}
+
+.product-caption {
+  display: block;
+  background-color: black;
+  text-align: center;
+  border: 4px solid black;
+  padding: 0.5em 0;
+}
+
+.info-container {
+  width: 35%;
+}
+
+.info-title {
+  display: block;
+  background-color: black;
+  padding: 1em 2em;
+}
+
+.info-details {
+  color: black;
+}
+
+@media only screen and max-width: 1024px) {
+
+}
+
+@media only screen and max-width: 470px) {
+
+}
+
+/* === FOOTER === */
+
+footer {
+  background-color: black;
+  padding: 5em 0;
+  margin-top: 4em;
 }
