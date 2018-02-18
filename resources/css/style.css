@@ -12,12 +12,6 @@ body {
   line-height: 1.4em;
 }
 
-@media only screen and (max-width: 1024) {
-  body {
-    font-size 16px;
-  }
-}
-
 h1, h4 {
   font-weight: bold;
 }
@@ -32,6 +26,10 @@ h1, h4 {
 .company {
   color: white;
   background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .company-container {
@@ -53,6 +51,7 @@ h1, h4 {
   background-position: center;
   height: 25rem;
   padding-top: 2rem;
+  margin-top: 2.8rem;
 }
 
 .banner-hero {
@@ -70,26 +69,6 @@ h1, h4 {
   margin: 0.25em 0;
 }
 
-@media only screen and (max-width: 470px) {
-  .main-banner {
-    height: 15em;
-  }
-
-  .banner-hero {
-    width: 100%;
-    padding: 1em 2em;
-    top: 10em;
-  }
-
-  .banner-hero h1 {
-    font-size: 1rem;
-  }
-
-  .banner-hero h4 {
-    font-size: 0.77rem;
-  }
-}
-
 /* === PRODUCT NAVIGATION BAR === */
 
 nav {
@@ -104,19 +83,8 @@ nav ul {
   list-style: none;
 }
 
-mobile-nav {
+.tablet-nav {
   display: none;
-}
-
-@media only screen and (max-width: 470px) {
-  nav ul {
-    display: none;
-  }
-
-  mobile-nav {
-    display: block;
-    text-align: center;
-  }
 }
 
 /* === PRODUCT CATALGUE and BUSINESS INFORMATION === */
@@ -134,7 +102,6 @@ mobile-nav {
 
 .product-image {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 9em;
@@ -168,18 +135,86 @@ mobile-nav {
   color: black;
 }
 
-@media only screen and max-width: 1024px) {
-
-}
-
-@media only screen and max-width: 470px) {
-
-}
-
 /* === FOOTER === */
 
 footer {
   background-color: black;
   padding: 5em 0;
   margin-top: 4em;
+}
+
+/* === MEDIA QUERIES === */
+
+@media only screen and (max-width: 1024px) {
+  .company {
+    font-size: 16px;
+  }
+
+  .main-banner {
+    margin-top: 2.7rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .tablet-nav {
+    text-align: center;
+    display: block;
+  }
+
+  .products,
+  .business-info  {
+    flex-wrap: wrap;
+  }
+
+  .product-tile-glasses {
+    display: none;
+  }
+
+  .product-tile {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15em;
+  }
+
+  .banner-hero {
+    width: 100%;
+    padding: 1em 2em;
+    top: 10em;
+  }
+
+  .banner-hero h1 {
+    font-size: 1rem;
+  }
+
+  .banner-hero h4 {
+    font-size: 0.77rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .product-tile {
+    width: 90%;
+    margin: auto;
+  }
+
+  .product-tile-watch {
+    display: none;
+  }
+
+  .info-container {
+    width: 90%;
+    margin: 0.5em auto;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
